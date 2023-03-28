@@ -1,17 +1,2 @@
-In this solution, I define 'fair' as distributing the prizes as equally as possible among the winners.
-
-If the total value of the prizes is not evenly divisible by the number of winners, then the remaining prize value is distributed among the winners in a way that maximizes the fairness (i.e., the difference in prize value between any two winners is minimized).
-
-In this case, I distribute the remaining prize value by giving each winner an additional prize until the remaining prize value is exhausted or all winners have received the same number of prizes.
-
-To accomplish this, I first read in the prizes and winners from the input. 
-
-I then calculate the total value of the prizes and the prize value per winner.
-
-I use these values to initialize a map that associates each winner with a list of prizes they have won. 
-
-I then iterate through the prizes and assign them to the winners in a round-robin fashion, starting over from the first winner after each winner has received the prize value per winner number of prizes. 
-
-Any remaining prizes are assigned to the winners in a way that maximizes the fairness.
-
-Finally, I print out the prize distribution by iterating through the map and printing out the winner and their list of prizes.
+I define 'fair' as distributing the prizes as evenly as possible among the winners, such that each winner gets a prize value as close as possible to the others. 
+In the case where the prizes cannot be divided, 'fair' means distributing the prizes in a way that results in the lowest difference between the highest and lowest prize values among the winners.
