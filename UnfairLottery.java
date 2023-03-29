@@ -72,6 +72,7 @@ public class UnfairLottery {
                 lowestTotal = total;
             }
         }
+        
         return winner;
     }
 }
